@@ -1,4 +1,6 @@
 # Equithon Demo
+[Download Completed Project](https://github.com/drampelt/equithon-demo/archive/master.zip)
+
 ## Steps
 1. [Setup Project](https://github.com/drampelt/equithon-demo/commit/0bbfa0e54bda4e57f677acee01e17110f5562135)
 2. [Add Libraries](https://github.com/drampelt/equithon-demo/commit/e3168b13b0861376b2c73adc7977a5f4372d96c9)
@@ -10,6 +12,17 @@
 8. [Create MovieDetailActivity](https://github.com/drampelt/equithon-demo/commit/61909faeb8f7346402cf5f0a55d753b6f06b843e)
 9. [Open MovieDetailActivity and show details when movie is tapped](https://github.com/drampelt/equithon-demo/commit/4e8954fa44eec9b75a1c467a81099ede440e881d)
 10. [Open IMDB page when globe is tapped](https://github.com/drampelt/equithon-demo/commit/7114a6bcc6f27cdea5732ded1418fed0e7439cbb)
+
+## Quick File Reference
+- [MainActivity.java](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/java/org/equithon/equithondemo/MainActivity.java)
+- [Movie.java](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/java/org/equithon/equithondemo/Movie.java)
+- [MovieAdapter.java](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/java/org/equithon/equithondemo/MovieAdapter.java)
+- [MovieDetailActivity.java](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/java/org/equithon/equithondemo/MovieDetailActivity.java)
+- [MovieService.java](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/java/org/equithon/equithondemo/MovieService.java)
+- [activity_main.xml](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/res/layout/activity_main.xml)
+- [activity_movie_detail.xml](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/res/layout/activity_movie_detail.xml)
+- [content_movie_detail.xml](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/res/layout/content_movie_detail.xml)
+- [list_item_movie.xml](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/res/layout/list_item_movie.xml)
 
 ## Copy/Paste Resources
 ### Libraries
