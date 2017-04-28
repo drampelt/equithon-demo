@@ -1,5 +1,7 @@
 package org.equithon.equithondemo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -34,7 +36,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         movieRating = (TextView) findViewById(R.id.movieRating);
         moviePlot = (TextView) findViewById(R.id.moviePlot);
 
-        Movie movie = getIntent().getParcelableExtra("movie");
+        final Movie movie = getIntent().getParcelableExtra("movie");
         movieTitle.setText(movie.title);
         movieYear.setText("Release Year: " + movie.year);
         movieDuration.setText("Duration: " + movie.runtime);
@@ -48,8 +50,9 @@ public class MovieDetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(movie.urlIMDB));
+                startActivity(intent);
             }
         });
 
