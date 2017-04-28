@@ -1,5 +1,6 @@
 package org.equithon.equithondemo;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,12 +50,21 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
             moviePlot = (TextView) itemView.findViewById(R.id.moviePlot);
         }
 
-        public void bind(Movie movie) {
+        public void bind(final Movie movie) {
             movieTitle.setText(movie.title + " (" + movie.year + ")");
             moviePlot.setText(movie.simplePlot);
             Picasso.with(itemView.getContext())
                     .load(movie.urlPosterPreview)
                     .into(moviePoster);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(itemView.getContext(), MovieDetailActivity.class);
+                    intent.putExtra("movie", movie);
+                    itemView.getContext().startActivity(intent);
+                }
+            });
         }
     }
 }
