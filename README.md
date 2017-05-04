@@ -1,17 +1,18 @@
 # Equithon Demo
-[Download Completed Project](https://github.com/drampelt/equithon-demo/archive/master.zip)
+- [Download Completed Project](https://github.com/drampelt/equithon-demo/archive/master.zip)
+- [Android Resources](https://github.com/drampelt/equithon-demo#other-android-resources)
 
 ## Steps
-1. [Setup Project](https://github.com/drampelt/equithon-demo/commit/0bbfa0e54bda4e57f677acee01e17110f5562135)
-2. [Add Libraries](https://github.com/drampelt/equithon-demo/commit/e3168b13b0861376b2c73adc7977a5f4372d96c9)
-3. [Create Movie model](https://github.com/drampelt/equithon-demo/commit/f7e4e012453c66102d2754fdb4b78d6ec4887d87)
-4. [Create Movie list item](https://github.com/drampelt/equithon-demo/commit/a01c26bd09e913fe79ffe7af6ceadd43446a385d)
-5. [Create MovieAdapter](https://github.com/drampelt/equithon-demo/commit/930c458057e9d95a39c191240c59045e4854ce57)
-6. [Setup MovieService and Retrofit](https://github.com/drampelt/equithon-demo/commit/4dab31a706ffe8fa05e4012b6713c9c2e81ac2a0)
-7. [Show Movies in RecyclerView](https://github.com/drampelt/equithon-demo/commit/ffc0de48e6d21423f65dfeb34043b9e12384d61a)
-8. [Create MovieDetailActivity](https://github.com/drampelt/equithon-demo/commit/61909faeb8f7346402cf5f0a55d753b6f06b843e)
-9. [Open MovieDetailActivity and show details when movie is tapped](https://github.com/drampelt/equithon-demo/commit/4e8954fa44eec9b75a1c467a81099ede440e881d)
-10. [Open IMDB page when globe is tapped](https://github.com/drampelt/equithon-demo/commit/7114a6bcc6f27cdea5732ded1418fed0e7439cbb)
+1. [Setup Project](https://github.com/drampelt/equithon-demo#step-1---setup-project-view-changes)
+2. [Add Libraries](https://github.com/drampelt/equithon-demo#step-2---add-libraries-view-changes)
+3. [Create Movie model](https://github.com/drampelt/equithon-demo#step-3---create-movie-model-view-changes)
+4. [Create Movie list item](https://github.com/drampelt/equithon-demo#step-4---create-movie-list-item-view-changes)
+5. [Create MovieAdapter](https://github.com/drampelt/equithon-demo#step-5---create-movieadapter-view-changes)
+6. [Setup MovieService and Retrofit](https://github.com/drampelt/equithon-demo#step-6---setup-movieservice-and-retrofit-view-changes)
+7. [Show Movies in RecyclerView](https://github.com/drampelt/equithon-demo#step-7---show-movies-in-recyclerview-view-changes)
+8. [Create MovieDetailActivity](https://github.com/drampelt/equithon-demo#step-8---create-moviedetailactivity-view-changes)
+9. [Open MovieDetailActivity and show details when movie is tapped](https://github.com/drampelt/equithon-demo#step-9---open-moviedetailactivity-when-movie-is-tapped-view-changes)
+10. [Open IMDB page when globe is tapped](https://github.com/drampelt/equithon-demo#step-10---open-imdb-page-when-globe-icon-is-tapped-view-changes)
 
 ## Quick File Reference
 - [MainActivity.java](https://github.com/drampelt/equithon-demo/blob/master/app/src/main/java/org/equithon/equithondemo/MainActivity.java)
@@ -30,6 +31,8 @@
 - Minimum SDK 19
 - Empty Activity (Backwards Compatible)
 
+---
+
 ### Step 2 - Add Libraries ([View Changes](https://github.com/drampelt/equithon-demo/commit/e3168b13b0861376b2c73adc7977a5f4372d96c9))
 - Add libraries to `app/build.gradle`:
 
@@ -42,6 +45,8 @@ compile 'com.squareup.retrofit2:retrofit:2.2.0'
 compile 'com.squareup.retrofit2:converter-gson:2.2.0'
 compile 'com.squareup.picasso:picasso:2.5.2'
 ```
+
+---
 
 ### Step 3 - Create Movie Model ([View Changes](https://github.com/drampelt/equithon-demo/commit/f7e4e012453c66102d2754fdb4b78d6ec4887d87))
 - Create `Movie.java`:
@@ -114,6 +119,8 @@ public class Movie implements Parcelable {
     };
 }
 ```
+
+---
 
 ### Step 4 - Create Movie List Item ([View Changes](https://github.com/drampelt/equithon-demo/commit/a01c26bd09e913fe79ffe7af6ceadd43446a385d))
 - Create `list_item_movie.xml` in `res/layouts` folder:
@@ -196,6 +203,8 @@ public class Movie implements Parcelable {
 </android.support.constraint.ConstraintLayout>
 ```
 
+---
+
 ### Step 5 - Create MovieAdapter ([View Changes](https://github.com/drampelt/equithon-demo/commit/930c458057e9d95a39c191240c59045e4854ce57))
 - Create `MovieAdapter.java`:
 
@@ -262,6 +271,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
 }
 ```
 
+---
+
 ### Step 6 - Setup MovieService and Retrofit ([View Changes](https://github.com/drampelt/equithon-demo/commit/4dab31a706ffe8fa05e4012b6713c9c2e81ac2a0))
 - Create `MovieService.java`:
 
@@ -302,6 +313,8 @@ movieService.getPopularMovies().enqueue(new Callback<List<Movie>>() {
 });
 ```
 
+---
+
 ### Step 7 - Show Movies in RecyclerView ([View Changes](https://github.com/drampelt/equithon-demo/commit/ffc0de48e6d21423f65dfeb34043b9e12384d61a))
 - Add internet permission to `AndroidManifest.xml`: ([View Changes](https://github.com/drampelt/equithon-demo/commit/ffc0de48e6d21423f65dfeb34043b9e12384d61a#diff-c8cc2dd42271f2bf39c6aa81eb6a5529), [View Full `AndroidManifest.xml`](https://github.com/drampelt/equithon-demo/blob/ffc0de48e6d21423f65dfeb34043b9e12384d61a/app/src/main/AndroidManifest.xml))
 
@@ -323,6 +336,8 @@ recyclerView.setLayoutManager(new LinearLayoutManager(this));
 MovieAdapter movieAdapter = new MovieAdapter(movies);
 recyclerView.setAdapter(movieAdapter);
 ```
+
+---
 
 ### Step 8 - Create `MovieDetailActivity` ([View Changes](https://github.com/drampelt/equithon-demo/commit/61909faeb8f7346402cf5f0a55d753b6f06b843e))
 - Create `MovieDetailActivity` with Right Click -> New -> Activity -> BasicActivity ([View Changes](https://github.com/drampelt/equithon-demo/commit/61909faeb8f7346402cf5f0a55d753b6f06b843e))
@@ -417,6 +432,8 @@ recyclerView.setAdapter(movieAdapter);
 </android.support.constraint.ConstraintLayout>
 ```
 
+---
+
 ### Step 9 - Open MovieDetailActivity when movie is tapped ([View Changes](https://github.com/drampelt/equithon-demo/commit/4e8954fa44eec9b75a1c467a81099ede440e881d))
 - Set an `OnClickListener` for the list item in `MovieAdapter.java` ([View Changes](https://github.com/drampelt/equithon-demo/commit/4e8954fa44eec9b75a1c467a81099ede440e881d#diff-8ef43159de49a201153168350d463829), [View Full `MovieAdapter.java`](https://github.com/drampelt/equithon-demo/blob/4e8954fa44eec9b75a1c467a81099ede440e881d/app/src/main/java/org/equithon/equithondemo/MovieAdapter.java))
 
@@ -462,6 +479,8 @@ Picasso.with(this)
         .into(moviePoster);
 ```
 
+---
+
 ### Step 10 - Open IMDB page when globe icon is tapped ([View Changes](https://github.com/drampelt/equithon-demo/commit/7114a6bcc6f27cdea5732ded1418fed0e7439cbb))
 - Add globe icon from Right Click -> New -> Vector Asset, search for 'public', name it `ic_globe.xml`
 - Edit icon, change color to `#FFFFFFFF`
@@ -503,6 +522,9 @@ startActivity(intent);
 
 ## Other Android Resources
 - [Official Android Documentation](https://developer.android.com/guide/index.html)
+- [CodePath Android Cliffnotes](https://guides.codepath.com/android) has guides for almost everything
 - [Parcelable Generator Plugin](https://github.com/mcharmas/android-parcelable-intellij-plugin)
 - Annoyed with repetitive `findViewById`s? [Butterknife](http://jakewharton.github.io/butterknife/) can help
 - Not a fan of Java? [Kotlin](https://kotlinlang.org) works perfectly with Android and is much nicer to work with
+- [Android Studio Tricks & Tips](https://medium.com/@mmbialas/50-android-studio-tips-tricks-resources-you-should-be-familiar-with-as-an-android-developer-af86e7cf56d2)
+- [List of 50 Beginner to Expert Resources](https://techbeacon.com/ultimate-android-development-guide-50-beginner-expert-resources)
