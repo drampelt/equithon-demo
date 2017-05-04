@@ -523,6 +523,7 @@ startActivity(intent);
 ## Other Android Resources
 - [Official Android Documentation](https://developer.android.com/guide/index.html)
 - [CodePath Android Cliffnotes](https://guides.codepath.com/android) has guides for almost everything
+- [Ultimate Android Reference](https://github.com/aritraroy/UltimateAndroidReference) - libraries, open source projects, tutorials
 - [Parcelable Generator Plugin](https://github.com/mcharmas/android-parcelable-intellij-plugin)
 - Annoyed with repetitive `findViewById`s? [Butterknife](http://jakewharton.github.io/butterknife/) can help
 - Not a fan of Java? [Kotlin](https://kotlinlang.org) works perfectly with Android and is much nicer to work with
