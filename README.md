@@ -1,6 +1,7 @@
 # Equithon Demo
 - [Download Completed Project](https://github.com/drampelt/equithon-demo/archive/master.zip)
 - [Android Resources](https://github.com/drampelt/equithon-demo#other-android-resources)
+- [API Location](https://gist.githubusercontent.com/drampelt/a83916c6d3c32d0732651d656ce0184d/raw/c5ca4d73034bfa9f2b2ccbf8accf6353f45d4661/movies.json)
 
 ## Steps
 1. [Setup Project](https://github.com/drampelt/equithon-demo#step-1---setup-project-view-changes)
