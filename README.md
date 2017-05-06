@@ -328,11 +328,15 @@ movieService.getPopularMovies().enqueue(new Callback<List<Movie>>() {
 ```java
 // Above onCreate
 private RecyclerView recyclerView;
+```
 
+```java
 // Below setContentView
 recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 recyclerView.setLayoutManager(new LinearLayoutManager(this));
+```
 
+```java
 // In onResponse
 MovieAdapter movieAdapter = new MovieAdapter(movies);
 recyclerView.setAdapter(movieAdapter);
@@ -460,7 +464,9 @@ private TextView movieYear;
 private TextView movieDuration;
 private TextView movieRating;
 private TextView moviePlot;
+```
 
+```java
 // Below setSupportActionBar in onCreate
 moviePoster = (ImageView) findViewById(R.id.moviePoster);
 movieTitle = (TextView) findViewById(R.id.movieTitle);
